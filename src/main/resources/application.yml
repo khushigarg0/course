@@ -1,0 +1,33 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+  cloud:
+    config:
+      enabled: false
+  application:
+    name: course
+  datasource:
+    url: jdbc:h2:mem:db
+    username: khushi
+    password: ''
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8050
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+build:
+  version: 6.0.0
